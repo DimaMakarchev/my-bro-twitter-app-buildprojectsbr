@@ -1,0 +1,31 @@
+.data{
+    /*border:5px solid #5c5dff;*/
+    width: 600px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,7.5);
+}
+.data>img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    height:300px;
+}
+
+.data_btn_text{
+    border: none;
+    background: white;
+    color: #039be5;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.data_btn_remove{
+    background: #ff9290;
+    border-radius: 5px;
+    border: white;
+    box-shadow: 0 0 10px rgb(212, 212, 212);
+    color: white;
+    padding: 5px 40px;
+    margin-bottom: 20px;
+}
