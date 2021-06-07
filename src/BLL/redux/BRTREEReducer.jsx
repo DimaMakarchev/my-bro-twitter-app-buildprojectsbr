@@ -74,11 +74,11 @@ export const testAxiosReqDispatcherServerLoadingBR = (data) => ({type: 'LOADING'
 export const testAxiosReqDispatcherServerGetObjectDBBR = (db) => ({type: 'OKSERVERBROBJECT', db});
 export const thunkAxiosReqDispatcherServerGetObjectBR = (index) => async (dispatch) => {
     try {
-        // dispatch(testAxiosReqDispatcherServerLoadingBR(true));
+        dispatch(testAxiosReqDispatcherServerLoadingBR(true));
         const dataBR = await axios.get(`http://localhost:8456/br3/${index}`);
         console.log(dataBR);
         dispatch(testAxiosReqDispatcherServerGetObjectDBBR(dataBR));
-        // dispatch(testAxiosReqDispatcherServerLoadingBR(false));
+        dispatch(testAxiosReqDispatcherServerLoadingBR(false));
     } catch (e) {
         console.log(e)
     }
