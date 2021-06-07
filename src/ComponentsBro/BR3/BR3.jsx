@@ -14,29 +14,43 @@ export const BR3 = ({firstName, text, img, methodReqObBr, loading, data}) => {
     const methodTextData = () => {
         setTextData(!textData);
     };
-    const methodLeft = (index) => {
-        if (index < data.length && index >= 0) {
-            methodReqObBr(index);
-            setCount(index);
-        } else {
-            setCount(index + 1);
-        }
-        setoncl(false);
 
+    const randomInteger = (min, max) => {
+        debugger;
+        methodReqObBr(Math.floor(Math.random() * 3));
+        // return Math.round(rand);
+    };
+    const checkIndex = (index) => {
+        if (index > data.length - 1) {
+            setCount(0);
+            return 0
+        }
+        if (index < 0) {
+            setCount(data.length - 1);
+            return data.length - 1
+        }
+        setCount(index);
+        return index;
     };
     const methodRight = (index) => {
-        if (index < data.length) {
-            methodReqObBr(index);
-            setCount(index);
-        } else {
-            setCount(data.length - 1);
-        }
+        let checkIndex1 = checkIndex(index);
+        methodReqObBr(checkIndex1);
+
         setoncl(true);
     };
 
+    const methodLeft = (index) => {
+        let checkIndex1 = checkIndex(index);
+        methodReqObBr(checkIndex1);
+
+        setoncl(false);
+
+    };
+
+
     const useMemo1 = useMemo(() => {
         if (loading) {
-            return <img style={{width: 100+'%'}} src={'https://miro.medium.com/max/1600/1*e_Loq49BI4WmN7o9ItTADg.gif'}
+            return <img style={{width: 100 + '%'}} src={'https://miro.medium.com/max/1600/1*e_Loq49BI4WmN7o9ItTADg.gif'}
                         alt={''}/>
         }
         debugger
@@ -51,7 +65,7 @@ export const BR3 = ({firstName, text, img, methodReqObBr, loading, data}) => {
     };
     return (
         <div className={'br3__container'}>
-            <div ><h1 className={'br3__headline'}>Our Reviews</h1></div>
+            <div><h1 className={'br3__headline'}>Our Reviews</h1></div>
             <div className={'br3__bottom_line'}></div>
             <div><img className={'br3_img'} src={img} alt={''}/></div>
 
@@ -70,6 +84,10 @@ export const BR3 = ({firstName, text, img, methodReqObBr, loading, data}) => {
                 <ArrowForwardIosIcon className={`br3__sign ${oncl && 'ok'}`} onClick={() => {
                     methodRight(count + 1)
                 }}/>
+
+            </div>
+            <div>
+                <button  className={'br3_btn_random'} onClick={() => randomInteger(0, data.length)}>Random</button>
             </div>
         </div>
     )

@@ -1,0 +1,16 @@
+body {
+    --twitter-collor: #345fff;
+    --bday-background: #eaebff;
+    background: var(--bday-background);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.app__container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

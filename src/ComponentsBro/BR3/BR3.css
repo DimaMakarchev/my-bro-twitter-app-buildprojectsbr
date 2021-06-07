@@ -35,28 +35,41 @@
     font-weight: 600;
 }
 
+.br3_btn_random {
+    margin-top: 10px;
+    background-color: #039be5;
+    color: white;
+    border-radius: 10px;
+    width:130px;
+}
+
 .br3_firstName > p:nth-child(2) {
     color: var(--twitter-collor);
+
 }
 
 .br3__sign {
-color: var(--twitter-collor) !important;
+    color: var(--twitter-collor) !important;
     cursor: pointer;
     width: 40px !important;
     height: 40px !important;
 }
+
 .br3__sign:hover {
     /*background: #000;*/
 }
+
 .ok {
     /*background: #ff61bc !important;*/
     background: #18b1e5 !important;
-    box-shadow: 0 0 10px #039be5!important;
-    border-radius: 5px!important;
+    box-shadow: 0 0 10px #039be5 !important;
+    border-radius: 5px !important;
     color: white !important;
 }
-.br3__btn__text{
+
+.br3__btn__text {
     border: none;
-    color:#039be5 ;
+    color: #039be5;
     background: white;
+
 }

@@ -5,7 +5,7 @@ const initBirthday = {
     firedb: [],
     serverdb: [],
     loading: true,
-    object:''
+    objectbr:[]
 };
 
 
@@ -39,7 +39,7 @@ export const BRTREEReducer = (state = initBirthday, action) => {
             case 'OKSERVERBROBJECT':
             debugger;
             return {
-                ...state, object: action.db.data
+                ...state, objectbr: action.db.data
             };
         default :
             return state;
